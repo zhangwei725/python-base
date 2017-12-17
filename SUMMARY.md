@@ -7,5 +7,5 @@
     * [二、Python安装配置](yi-3001-ji-chu-bu-fen/di-yi-zhang/er-3001-python-an-zhuang-pei-zhi.md)
     * [三、Python 解释器](yi-3001-ji-chu-bu-fen/di-yi-zhang/san-3001-python-jie-shi-qi.md)
     * [四、基础知识](yi-3001-ji-chu-bu-fen/di-yi-zhang/si-3001-ji-chu-zhi-shi.md)
-    * [五、变量与常亮](yi-3001-ji-chu-bu-fen/di-yi-zhang/wu-3001-bian-liang-yu-chang-liang.md)
+    * [五、变量与常量](yi-3001-ji-chu-bu-fen/di-yi-zhang/wu-3001-bian-liang-yu-chang-liang.md)
 
