@@ -8,4 +8,5 @@
     * [三、Python 解释器](yi-3001-ji-chu-bu-fen/di-yi-zhang/san-3001-python-jie-shi-qi.md)
     * [四、基础知识](yi-3001-ji-chu-bu-fen/di-yi-zhang/si-3001-ji-chu-zhi-shi.md)
     * [五、变量与常量](yi-3001-ji-chu-bu-fen/di-yi-zhang/wu-3001-bian-liang-yu-chang-liang.md)
+    * [六、数据类型](yi-3001-ji-chu-bu-fen/di-yi-zhang/liu-3001-shu-ju-lei-xing.md)
 
