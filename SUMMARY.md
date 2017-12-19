@@ -11,5 +11,5 @@
     * [六、数据类型](yi-3001-ji-chu-bu-fen/di-yi-zhang/liu-3001-shu-ju-lei-xing.md)
     * [七、运算符](yi-3001-ji-chu-bu-fen/di-yi-zhang/qi-3001-yun-suan-fu.md)
     * [八、流程控制](yi-3001-ji-chu-bu-fen/di-yi-zhang/ba-3001-liu-cheng-kong-zhi.md)
-    * 九、列表,元组,字典
+    * [九、列表,元组,字典](yi-3001-ji-chu-bu-fen/di-yi-zhang/jiu-3001-lie-88682c-yuan-7ec42c-zi-dian.md)
 
