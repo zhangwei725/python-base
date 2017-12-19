@@ -9,4 +9,7 @@
     * [四、基础知识](yi-3001-ji-chu-bu-fen/di-yi-zhang/si-3001-ji-chu-zhi-shi.md)
     * [五、变量与常量](yi-3001-ji-chu-bu-fen/di-yi-zhang/wu-3001-bian-liang-yu-chang-liang.md)
     * [六、数据类型](yi-3001-ji-chu-bu-fen/di-yi-zhang/liu-3001-shu-ju-lei-xing.md)
+    * 七、运算符
+    * 八、流程控制
+    * 九、列表,元组,字典
 
