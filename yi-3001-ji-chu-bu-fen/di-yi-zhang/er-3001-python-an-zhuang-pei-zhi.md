@@ -8,7 +8,7 @@
 
 > Python最新源码，二进制文档，新闻资讯等可以在Python的官网查看到：
 >
-> Python官网：<http://www.python.org/>
+> Python官网：[http://www.python.org/](http://www.python.org/)
 >
 > 你可以在以下链接中下载 Python 的文档，你可以下载 HTML、PDF 和 PostScript 等格式的文档。
 >
@@ -44,7 +44,7 @@
 
    ![](http://opzv089nq.bkt.clouddn.com/17-12-13/47614326.jpg)
 
-1. 如果add python to path忘记勾选了可以用命令或者图形化界面配置
+7. 如果add python to path忘记勾选了可以用命令或者图形化界面配置
 
    命令方式
 
@@ -60,7 +60,7 @@
 
 Python有两个版本，一个是2.x版，一个是3.x版，这两个版本是不兼容的，现在 Mac 上默认安装的 python 版本为  2.7 版本，若 安装 新版本需要 通过 该地址进行下载：
 
-https://www.python.org/downloads/mac-osx/ 下载相应的版本,双击安装
+[https://www.python.org/downloads/mac-osx/](https://www.python.org/downloads/mac-osx/) 下载相应的版本,双击安装
 
 如果安装了 Homebrew，直接通过命令 brew install python3 安 装即可
 
@@ -74,7 +74,7 @@ https://www.python.org/downloads/mac-osx/ 下载相应的版本,双击安装
 
 ```
 [root@localhost /]# cd /
-[root@localhost /]# 
+[root@localhost /]#
 ```
 
 默认Centos7中是有python安装的，但是是2.7版本，我们需要安装py3。我们去看一下默认的py2.7在哪里。
@@ -83,12 +83,12 @@ https://www.python.org/downloads/mac-osx/ 下载相应的版本,双击安装
 [root@localhost bin]# cd /usr/bin
 [root@localhost bin]# ls python*
 python  python2  python2.7 
-[root@localhost bin]# 
+[root@localhost bin]#
 ```
 
 三个显示结果中最后一个是python2.7，实际上这几个文件之间是有依赖关系的。在ls 后面加个 -al参数，如下：
 
-　依赖关系很明显就可以看到。我们要安装版本3，首先要把刚才显示的三个python文件中的第一个python给备份一下（不保留源文件，仅保留备份文件就可以）
+依赖关系很明显就可以看到。我们要安装版本3，首先要把刚才显示的三个python文件中的第一个python给备份一下（不保留源文件，仅保留备份文件就可以）
 
 使用如下命令：
 
@@ -98,9 +98,9 @@ python  python2  python2.7
 
 python文件变成了python.bak文件，bak文件就放这里吧，再也不用管它了。避免以后麻烦，就留在这里不用删除。系统准备好了，接下来，我们要去下载了。
 
-比较推荐下面这种方式，我们在linux上找一个目录，然后使用wget命令下载到这个目录，然后解压->安装。如下：
+比较推荐下面这种方式，我们在linux上找一个目录，然后使用wget命令下载到这个目录，然后解压-&gt;安装。如下：
 
-https://www.python.org/ftp/python/   这个是所有的python版本存放的地方。我们想使用哪个版本就用哪个。
+[https://www.python.org/ftp/python/](https://www.python.org/ftp/python/)   这个是所有的python版本存放的地方。我们想使用哪个版本就用哪个。
 
 ![img](http://images2017.cnblogs.com/blog/929887/201710/929887-20171021135301021-899974983.png)
 
@@ -110,7 +110,7 @@ https://www.python.org/ftp/python/   这个是所有的python版本存放的地�
 
 然后根据地址栏的链接拼接成如下链接：（如果是其他版本道理与这个是一样的）
 
-https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz
+[https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz](https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz)
 
 链接准备好了，我们在Centos 7上创建一个目录吧。一般选择的是/usr/local里面的，如下命令（当前我们依然还在之前的/usr/bin目录下面，先不要动，还在这里）：
 
@@ -124,7 +124,7 @@ https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz
 [root@localhost bin]# cd /usr/local/python3
 [root@localhost python3]# ll
 total 0
-[root@localhost python3]# 
+[root@localhost python3]#
 ```
 
 接下来我们要用刚才的网址，把源码下载到这个目录下就OK，命令如下：
@@ -137,7 +137,7 @@ total 0
 
 ```
 #解压命令
-[root@localhost python3]# tar -xvf Python-3.6.3.tgz 
+[root@localhost python3]# tar -xvf Python-3.6.3.tgz
 ```
 
 ```
@@ -154,7 +154,7 @@ drwxr-xr-x. 17  501  501     4096 Oct 21 12:22 Python-3.6.3
 
 ```
 [root@localhost python3]# cd Python-3.6.3/
-[root@localhost Python-3.6.3]# 
+[root@localhost Python-3.6.3]#
 ```
 
 然后如下命令（执行完这句命令之后，不要切换到别的目录，不然会非常懵逼，因为执行完之后如果去/usr/local/下面的看的话是没有python3Dir目录的）：
@@ -187,7 +187,7 @@ drwxr-xr-x. 2 root root 245 Oct 21 12:26 bin
 drwxr-xr-x. 3 root root  24 Oct 21 12:26 include
 drwxr-xr-x. 4 root root  63 Oct 21 12:26 lib
 drwxr-xr-x. 3 root root  17 Oct 21 12:26 share
-[root@localhost python3Dir]# 
+[root@localhost python3Dir]#
 ```
 
 接下来我们还有一点善后工作。切换到 /usr/bin目录下面吧：
@@ -216,7 +216,7 @@ drwxr-xr-x. 3 root root  17 Oct 21 12:26 share
 
 把文件开头第一行的
 
-\#!/usr/bin/python改成#!/usr/bin/python2.7  这样就可以了。
+\#!/usr/bin/python改成\#!/usr/bin/python2.7  这样就可以了。
 
 然后，下面保存退出。注意步骤。
 
@@ -234,13 +234,16 @@ lrwxrwxrwx. 1 root root   33 Oct 21 12:30 python -> /usr/local/python3Dir/bin/py
 lrwxrwxrwx. 1 root root    9 Oct 19 23:55 python2 -> python2.7
 -rwxr-xr-x. 1 root root 7136 Aug  4 08:40 python2.7
 lrwxrwxrwx. 1 root root    7 Oct 19 23:55 python.bak -> python2
-[root@localhost bin]# 
+[root@localhost bin]#
 ```
 
- 然后查看一下当前的python版本
+然后查看一下当前的python版本
 
 ```
 [root@localhost bin]# python -V
 Python 3.6.3
-[root@localhost bin]# 
+[root@localhost bin]#
 ```
+
+
+
