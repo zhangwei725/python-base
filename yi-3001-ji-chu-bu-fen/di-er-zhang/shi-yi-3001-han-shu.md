@@ -141,8 +141,6 @@ Python提供了许多内建函数，比如print() input()。但也可以自己�
    def add(n1, n2):
        num = n1 + n2
        return num
-     
-     
    number = add(1,2)
    print(number)
    ```
