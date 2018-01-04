@@ -135,7 +135,7 @@ Python提供了许多内建函数，比如print() input()。但也可以自己�
    ```
 
 
-1. 调用有参的函数并返回数据
+3. 调用有参的函数并返回数据
 
    ```python
    def add(n1, n2):
@@ -172,7 +172,6 @@ Python提供了许多内建函数，比如print() input()。但也可以自己�
    ```python
    def show_args(arg, def_arg=1, def_arg2=2):
          return "arg={}, def_arg={}, def_arg2={}".format(arg, def_arg, def_arg2)
-
     show_args("普通参数")
     #指定参数名称
     show_args(arg="普通参数")
@@ -183,8 +182,6 @@ Python提供了许多内建函数，比如print() input()。但也可以自己�
    ```python
    def show_args(arg, def_arg=1, def_arg2=2):
          return "arg={}, def_arg={}, def_arg2={}".format(arg, def_arg, def_arg2)
-    
-    
    show_args("普通参数", "默认参数1")
    ```
 
@@ -193,8 +190,6 @@ Python提供了许多内建函数，比如print() input()。但也可以自己�
    ```python
    def show_args(arg, def_arg=1, def_arg2=2):
          return "arg={}, def_arg={}, def_arg2={}".format(arg, def_arg, def_arg2)
-    
-    
    show_args(arg="普通参数", "默认参数1", "默认参数2")
    ```
 
