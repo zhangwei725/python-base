@@ -61,7 +61,7 @@ Python提供了许多内建函数，比如print() input()。但也可以自己�
 
 1. 定义无参数无返回值的函数
 
-   ```python
+   ```
    def show():
        print("自定义函数")
        print("我是函数内的代码2")
