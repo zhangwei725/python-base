@@ -15,5 +15,5 @@
     * [十、列表,元组,字典,集合](yi-3001-ji-chu-bu-fen/di-yi-zhang/shi-3001-lie-88682c-yuan-7ec42c-zi-51782c-ji-he.md)
   * [第二章](yi-3001-ji-chu-bu-fen/di-er-zhang.md)
     * [十一、函数](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-yi-3001-han-shu.md)
-    * 十二、函数进阶
+    * [十二、函数进阶](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-er-3001-han-shu-jin-jie.md)
 
