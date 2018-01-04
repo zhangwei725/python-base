@@ -61,7 +61,7 @@ Python提供了许多内建函数，比如print() input()。但也可以自己�
 
 1. 定义无参数无返回值的函数
 
-   ```
+   ```python
    def show():
        print("自定义函数")
        print("我是函数内的代码2")
@@ -113,7 +113,7 @@ Python提供了许多内建函数，比如print() input()。但也可以自己�
 
 #### 2、语法格式
 
-> 函数名(实参)
+函数名(实参)
 
 #### 3、示例代码
 
@@ -123,9 +123,6 @@ Python提供了许多内建函数，比如print() input()。但也可以自己�
    def show():
        print("自定义函数")
        print("我是函数内的代码2")
-   #空两行
-
-
    show()  
    ```
 
@@ -134,8 +131,6 @@ Python提供了许多内建函数，比如print() input()。但也可以自己�
    ```python
    def add(a, b):
        print(a + b)
-    
-
    add(1, 2)
    ```
 
