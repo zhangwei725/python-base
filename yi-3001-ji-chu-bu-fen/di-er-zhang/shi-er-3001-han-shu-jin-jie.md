@@ -305,7 +305,9 @@
    ```python
    def scope_complex():
        def ex_local():
-           var = "本地作用域2"  # 此函数定义了另外的一个spam字符串变量，并且生命周期只在此函数内。此处的spam和外层的spam是两个变量，如果写出spam = spam + “local spam” 会报错
+            # 此函数定义了另外的一个var字符串变量，并且生命周期只在此函数内。
+            #此处的var和外层的var是两个变量，
+           var = "本地作用域2" 
 
        def ex_nonlocal():
            nonlocal var  # 使用外层的var变量
@@ -447,7 +449,7 @@
 >
 > 2. 对于一些抽象的，不会别的地方再复用的函数，有时候给函数起个名字也是个难题，使用lambda不需要考虑命名的问题
 >
->    ​　
+>    　
 
 ### 3、语法格式
 
