@@ -41,8 +41,6 @@
          """
          name = '吃鸡'
            print(name)
-
-             
      if __name__ == '__main__':
          fun()
          print(name)#程序出错
@@ -54,7 +52,6 @@
      #demo1.py
      txt = '大吉大利,今晚吃鸡'
      print(txt)
-
      #demo2.py
      print(txt)#程序出错
      ```
