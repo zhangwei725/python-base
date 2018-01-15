@@ -189,7 +189,6 @@
    ```python
    def  fun():
        name = "hehe"
-    
    print(name)
    ```
 
@@ -276,13 +275,11 @@
      ```python
      def outer():
          num = 1
-
          def inner():
              # 把 num 绑定到外部函数的局部变量 num 上
              nonlocal num
              num = 2
              print("inner:", num)
-
          inner()
          print("outer:", num)
      if __name__ == '__main__':
@@ -422,8 +419,6 @@
 
    2、执行fun1()时与fun2()没有任何关系，name = "小明"与fun1在一个作用域链，所以输出的是"小明"
 
-   ​	
-
 ## 二、lambda表达式(匿名函数)
 
 ### 1、概念
@@ -452,9 +447,7 @@
 >
 > 2. 对于一些抽象的，不会别的地方再复用的函数，有时候给函数起个名字也是个难题，使用lambda不需要考虑命名的问题
 >
->    ​
-
-　
+>    ​　
 
 ### 3、语法格式
 
