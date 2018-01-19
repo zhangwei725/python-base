@@ -802,7 +802,7 @@
      '''
       Traceback (most recent call last):
         File "/Users/zhangwei/work/PycharmProjects/Demo/day05/src/lambda_reduce.py", line 12, in <module>
-          print(reduce(None,[1,2,3,4])  )
+          print(reduce(None,[1,2,3,4]))
       TypeError: 'NoneType' object is not callable
      '''
      ```
