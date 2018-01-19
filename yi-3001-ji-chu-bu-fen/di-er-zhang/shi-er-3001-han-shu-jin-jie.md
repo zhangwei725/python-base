@@ -132,7 +132,7 @@
 
      4、此时方法执行完毕,执行第二个print\(name\)由于前面学过的作用域可以知道第二个name变量只会在全局作用域中查找,所以输出小明
 
-1. 总结
+5. 总结
    * 在局部命名空间处，全局命名空间的同名变量是不可见的（只有变量不同名的情况下，可使用 global关键字让其可见）
    * 闭包函数外的函数中
    * 全局命名空间和局部命名空间中， 如果有同名变量，在全局命名空间处，局部命名空间内的同名变量是不可见的
@@ -397,7 +397,7 @@
       #输出老王
    ```
 
-1. 栗子2
+2. 栗子2
 
    ```python
    name = "小明"
@@ -798,61 +798,60 @@
 
      ```python
      reduce(None,[1,2,3,4])
-     ```
-
-```
- Traceback (most recent call last):
-   File "/Users/zhangwei/work/PycharmProjects/Demo/day05/src/lambda_reduce.py", line 12, in <module>
-     print(reduce(None,[1,2,3,4])  )
- TypeError: 'NoneType' object is not callable
-```
-
-    - func(x,y)只能有两个参数，否则报错
-
-      ```python
-      reduce(lambda x: x * 2, [1, 2, 3, 4], 10)
-
+     '''
       Traceback (most recent call last):
         File "/Users/zhangwei/work/PycharmProjects/Demo/day05/src/lambda_reduce.py", line 12, in <module>
-          print(reduce(lambda x: x * 2, [1, 2, 3, 4], 10))
-      TypeError: <lambda>() takes 1 positional argument but 2 were given
+          print(reduce(None,[1,2,3,4])  )
+      TypeError: 'NoneType' object is not callable
+     '''
+     ```
 
-* 底层实现
+   * func(x,y)只能有两个参数，否则报错
 
-  \`\`\`  
-  def reduce\(function, iterable, initializer=None\):  
-  it = iter\(iterable\)  
-      if initializer is None:  
-          value = next\(it\)  
-      else:  
-          value = initializer  
-      for element in it:  
-          value = function\(value, element\)  
-  return value
+     ```python
+     print(reduce(lambda x: x * 2, [1, 2, 3, 4], 10))
+     '''
+       Traceback (most recent call last):
+         File "/Users/zhangwei/work/PycharmProjects/Demo/day05/src/lambda_reduce.py", line 12, in <module>
+        print(reduce(lambda x: x * 2, [1, 2, 3, 4], 10))
+       TypeError: <lambda>() takes 1 positional argument but 2 were given
+       '''
+     ```
 
-    ## 三、闭包
+   * 底层实现
 
-    ### 1、闭包的概念
+     ```python
+     def reduce(function, iterable, initializer=None):
+         it = iter(iterable)
+         if initializer is None:
+             value = next(it)
+         else:
+             value = initializer
+         for element in it:
+             value = function(value, element)
+             return value
+     ```
 
-    > 在一些语言中，在函数中可以（嵌套）定义另一个函数时，如果内部的函数引用了外部的函数的变量，则可能产生闭包。闭包可以用来在一个函数与一组“私有”变量之间创建关联关系。在给定函数被多次调用的过程中，这些私有变量能够保持其持久性。闭包就是能够读取其他函数内部变量的函数。在本质上，闭包是将函数内部和函数外部连接起来的桥梁
-    >
-    > 用比较容易懂的人话说，就是当某个函数被当成对象返回时，夹带了外部变量，就形成了一个闭包,例如:
-    >
-    > ```python
-    > def parent():
-    >     msg = '局部变量'
-    >     def child():
-    >         print(msg)  # 外部变量
-    >     return child  # 返回的是函数，带外部变量的
-    >
-    > if __name__ == '__main__':
-    >     p = parent()
-    >     p()
-    >
+## 三、闭包
 
-&gt;
+### 1、闭包的概念
 
+> 在一些语言中，在函数中可以（嵌套）定义另一个函数时，如果内部的函数引用了外部的函数的变量，则可能产生闭包。闭包可以用来在一个函数与一组“私有”变量之间创建关联关系。在给定函数被多次调用的过程中，这些私有变量能够保持其持久性。闭包就是能够读取其他函数内部变量的函数。在本质上，闭包是将函数内部和函数外部连接起来的桥梁
 >
+> 用比较容易懂的人话说，就是当某个函数被当成对象返回时，夹带了外部变量，就形成了一个闭包,例如:
+>
+> ```python
+> def parent():
+>     msg = '局部变量'
+>     def child():
+>         print(msg)  # 外部变量
+>     return child  # 返回的是函数，带外部变量的
+>
+> if __name__ == '__main__':
+>     p = parent()
+>     p()
+>
+> ```
 
 ### 2、闭包的用途
 
@@ -891,36 +890,35 @@
                print(value)
                if value == 0:
                    break
+       ```
 
-​
+   3. 栗子3
 
-1. 栗子3
+      ```python
+      """
+      比如，如果你希望函数的每次执行结果，都是基于这个函数上次的运行结果。我以一个类似棋盘游戏的例子来说明。假设棋盘大小为50*50，左上角为坐标系原点(0,0)，我需要一个函数，接收2个参数，分别为方向(direction)，步长(step)，该函数控制棋子的运动。棋子运动的新的坐标除了依赖于方向和步长以外，当然还要根据原来所处的坐标点，用闭包就可以保持住这个棋子原来所处的坐标。
+      """
 
-   ```python
-   """
-   比如，如果你希望函数的每次执行结果，都是基于这个函数上次的运行结果。我以一个类似棋盘游戏的例子来说明。假设棋盘大小为50*50，左上角为坐标系原点(0,0)，我需要一个函数，接收2个参数，分别为方向(direction)，步长(step)，该函数控制棋子的运动。棋子运动的新的坐标除了依赖于方向和步长以外，当然还要根据原来所处的坐标点，用闭包就可以保持住这个棋子原来所处的坐标。
-   """
+      origin = [0, 0]  # 坐标系统原点  
+      legal_x = [0, 50]  # x轴方向的合法坐标  
+      legal_y = [0, 50]  # y轴方向的合法坐标  
+      def create(pos=origin):  
+          def player(direction,step):  
+              # 这里应该首先判断参数direction,step的合法性，比如direction不能斜着走，step不能为负等  
+              # 然后还要对新生成的x，y坐标的合法性进行判断处理，这里主要是想介绍闭包，  
+              new_x = pos[0] + direction[0]*step  
+              new_y = pos[1] + direction[1]*step  
+              pos[0] = new_x  
+              pos[1] = new_y  
+              #注意！此处不能写成 pos = [new_x, new_y]，  
+              return pos  
+          return player  
 
-   origin = [0, 0]  # 坐标系统原点  
-   legal_x = [0, 50]  # x轴方向的合法坐标  
-   legal_y = [0, 50]  # y轴方向的合法坐标  
-   def create(pos=origin):  
-       def player(direction,step):  
-           # 这里应该首先判断参数direction,step的合法性，比如direction不能斜着走，step不能为负等  
-           # 然后还要对新生成的x，y坐标的合法性进行判断处理，这里主要是想介绍闭包，  
-           new_x = pos[0] + direction[0]*step  
-           new_y = pos[1] + direction[1]*step  
-           pos[0] = new_x  
-           pos[1] = new_y  
-           #注意！此处不能写成 pos = [new_x, new_y]，  
-           return pos  
-       return player  
-
-   player = create()  # 创建棋子player，起点为原点  
-   print player([1,0],10)  # 向x轴正方向移动10步  
-   print player([0,1],20)  # 向y轴正方向移动20步  
-   print player([-1,0],10)  # 向x轴负方向移动10步
-   ```
+      player = create()  # 创建棋子player，起点为原点  
+      print player([1,0],10)  # 向x轴正方向移动10步  
+      print player([0,1],20)  # 向y轴正方向移动20步  
+      print player([-1,0],10)  # 向x轴负方向移动10步
+      ```
 
 ### 5、使用闭包的注意点
 
@@ -1053,13 +1051,13 @@
        hello()
    ```
 
-1. 说明
+2. 说明
    * 在需要添加的装饰函数上面一行使用`@`来添加装饰器
    * `@`后面紧跟中装饰器名`strong`, 当然你可以定于任何的名字.
    * `strong`是装饰器, 本质上是一个函数. 他接收函数`hello`作为参数, 并返回一函数来替换掉`hello`\(当然也可以不替换\).
    * `hello`使用装饰器之后, 相当于`hello`函数使用下面的代码被替换掉了`hello = strong(hello)`
    * 在调用`hello`的时候, 其实是调用的`strong()`返回的那个函数.
-2. 满足以下条件
+3. 满足以下条件
    * 装饰器函数运行在函数定义的时候 
    * 装饰器需要返回一个可执行的对象 
    * 装饰器返回的可执行对象要兼容函数的参数
