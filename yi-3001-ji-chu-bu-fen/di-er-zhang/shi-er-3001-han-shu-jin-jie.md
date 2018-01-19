@@ -798,7 +798,7 @@
    * func\(\)函数不能为None,否则报错
 
      ```python
-     reduce(None,[1,2,3,4])
+     print(reduce(None,[1,2,3,4]))
      '''
       Traceback (most recent call last):
         File "/Users/zhangwei/work/PycharmProjects/Demo/day05/src/lambda_reduce.py", line 12, in <module>
