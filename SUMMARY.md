@@ -17,4 +17,5 @@
     * [十一、函数](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-yi-3001-han-shu.md)
     * [十二、函数进阶](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-er-3001-han-shu-jin-jie.md)
     * [十三、面向对象](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-san-3001-mian-xiang-dui-xiang.md)
+    * [十四、面向对象进阶](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-si-3001-mian-xiang-dui-xiang-jin-jie.md)
 
