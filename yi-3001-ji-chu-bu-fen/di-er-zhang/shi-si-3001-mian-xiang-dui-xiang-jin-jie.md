@@ -323,13 +323,7 @@
        print('通过对象调用修改后的类变量:' + str(person.money))
    ```
 
-   打印结果
-
-   ![](http://opzv089nq.bkt.clouddn.com/18-1-25/93925068.jpg)
-
-   内存结构图
-
-   ![](http://opzv089nq.bkt.clouddn.com/18-1-25/91835083.jpg)
+   打印结果![](http://opzv089nq.bkt.clouddn.com/18-1-25/93925068.jpg)内存结构图![](http://opzv089nq.bkt.clouddn.com/18-1-25/91835083.jpg)
 
    说明
 
@@ -367,6 +361,7 @@
 5. 普通方法\(实例方法\)
 
 6. 私有方法（方法前面加两个下划线）
+
 7. 静态方法
 8. 类方法
 9. 属性方法
@@ -413,66 +408,70 @@
        print(self.name + ':今天天气挺好的!!!')
      ```
 
-     if __name__ == '__main__':
-           '''测试开始'''
-         xm = Person('小明', 18, '男')
-         xm.say()
+     if **name** == '**main**':  
+           '''测试开始'''  
+         xm = Person\('小明', 18, '男'\)  
+         xm.say\(\)
 
-     ```
+     \`\`\`
 
-* 带参数的普通方法
+6. 带参数的普通方法
 
-  \`\`\`python  
-  class Person:  
-      def **init**\(self, name, age, gender\):  
-          self.name = name  
-          self.age = age  
-          self.gender = gender
+   \`\`\`python  
+   class Person:  
+       def **init**\(self, name, age, gender\):  
+           self.name = name  
+           self.age = age  
+           self.gender = gender
 
-  ```
-  def say(self):                                
-      print(self.name + ':今天天气挺好的!!!')          
+   ```
+   def say(self):                                
+       print(self.name + ':今天天气挺好的!!!')          
 
-  def say1(self, content):                      
-      print(self.name + content)                
-  ```
+   def say1(self, content):                      
+       print(self.name + content)
+   ```
 
-     if __name__ == '__main__':                        
-         '''测试开始'''                                    
-         xm = Person('小明', 18, '男')
-         #带参数的
-         xm.say1(':阿红我想你!!!')                          
-     ```
+   if **name** == '**main**':  
+          '''测试开始'''  
+          xm = Person\('小明', 18, '男'\)
 
-* 带返回值
+   ```
+      #带参数的
+      xm.say1(':阿红我想你!!!')                          
+   ```
 
-  ```python
-  class Person:                                     
-      def __init__(self, name, age, gender):        
-          self.name = name                          
-          self.age = age                            
-          self.gender = gender                      
+   \`\`\`
 
-      def say(self):                                
-          print(self.name + ':今天天气挺好的!!!')          
+7. 带返回值
 
-      def get_name(self):
-          return self.name
+   ```python
+   class Person:                                     
+       def __init__(self, name, age, gender):        
+           self.name = name                          
+           self.age = age                            
+           self.gender = gender                      
 
-  if __name__ == '__main__':                        
-      '''测试开始'''                                    
-      xm = Person('小明', 18, '男')
-        print(xm.get_name())
-  ```
+       def say(self):                                
+           print(self.name + ':今天天气挺好的!!!')          
 
-* 不要在实例方法里绑定实例变量
+       def get_name(self):
+           return self.name
 
-  ```python
-  class  Person:
-   #推荐放在init方法中
-   def set_name(self, name):
-       self.name = name
-  ```
+   if __name__ == '__main__':                        
+       '''测试开始'''                                    
+       xm = Person('小明', 18, '男')
+         print(xm.get_name())
+   ```
+
+8. 不要在实例方法里绑定实例变量
+
+   ```python
+   class  Person:
+    #推荐放在init方法中
+    def set_name(self, name):
+        self.name = name
+   ```
 
 #### 2.4、静态方法
 
