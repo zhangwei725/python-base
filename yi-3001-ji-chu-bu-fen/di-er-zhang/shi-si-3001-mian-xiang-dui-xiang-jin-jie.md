@@ -1,4 +1,4 @@
-# 类和对象
+# 面向对象
 
 ## 一、简介
 
@@ -30,9 +30,21 @@
 
 ### 4、OOP 主要目标：
 
-> 1. 重用性
-> 2. 灵活性
-> 3. 扩展性
+1. 重用性
+
+2. 灵活性
+
+3. 扩展性
+
+4. 注意面向对象的程序设计并不是全部,只是解决了软件设计的扩展性
+
+   ![](http://opzv089nq.bkt.clouddn.com/18-1-24/18603752.jpg)
+
+   ​
+
+5. ​
+
+6. ​
 
 ## 三、OOP术语概述
 
@@ -98,7 +110,7 @@
 
 ## 五、类
 
-### 3.1、什么是类
+### 1、什么是类
 
 > 在 python 中所有类型的数据都可以看成对象, 包括我们我们以前学习的所有的内置类型`int`, `float`等.
 >
@@ -106,12 +118,48 @@
 >
 > 我们可以根据需要自定义很多类型出来, 这些自定义的类型**也是我们面向对象中的类**
 
-#### 3.2、语法
+### 2、分类
 
-1. 格式
+1. 经典类
+2. 新式类
+
+### 3、自定义类的组成
+
+![](http://opzv089nq.bkt.clouddn.com/18-1-22/56885859.jpg)
+
+### 4、语法
+
+1. 经典类格式
 
    ```python
-   class 类名():
+   class 类名:
+   #静态字段
+   属性=值
+   #私有静态字段(外部无法访问)
+   _属性=值
+    #私有静态字段且子类无法覆盖
+   __属性=值
+   def __init__(self,参数1,参数2,...):
+       """"初始化方法(构造方法)"""
+       #普通字段
+       self.字段 = 参数1
+       self.字段 = 参数2
+
+   def 方法名(self,参数1,参数2,...):
+       '''无返回值的方法'''
+   def 方法名(self,参数1,参数2,...):
+       '''有返回值的方法'''
+       retrun 返回值
+       
+    @property  
+    def 属性名(self):
+       return obj
+   ```
+
+2. 新式类格式
+
+   ```python
+   class 类名(object):
    #静态变量
    属性=值
    #私有变量
@@ -124,36 +172,380 @@
    self.变量名 = 参数2
 
    def 方法名(self,参数1,参数2,...):
-       '''无返回值的方法'''
-   def 方法名(self,参数1,参数2,...):
-       '''有返回值的方法'''
-       retrun 返回值
+   	pass
+
+   ```
+
+### 4、举个栗子
+
+1. 栗子1
+
+   ```python
+   class Person():
+       def __init__(self, name):
+           self.name = name
+       def say(self):
+           print(self.name + ":在说话")
+           
+       def run(self):
+           print(self.name + ':带着小姨子跑路了')
+
+   if __name__ == '__main__':
+       person = Person('小明')
+      	print(person.name)
+       person.say()
+       person.run()
    ```
 
 2. 说明
 
-   ​
+   ![](http://opzv089nq.bkt.clouddn.com/18-1-23/95330704.jpg)
 
-3.1、示例代码
+3. 内存分析图
 
+   ![](http://opzv089nq.bkt.clouddn.com/18-1-24/47760191.jpg)
 
+4. 执行步骤
+
+   1、将类加载进内存 
+
+   2、将类变量加载进类的内存 
+
+   3、将__init__方法的地址加载进类的内存
+
+   4、将普通方法方法的地址加载进类的内存
+
+   5、实例化对象分配对象内存地址
+
+   6、将实例变量初始化加载进对象内存
+
+5. self：
+
+   在实例化时自动将对象/实例本身传给__init__的第一个参数，你也可以给他起个别的名字，但是正常人都不会这么做。
+   因为你瞎改别人就不认识
+
+## 六、类的构成详解
+
+### 1、字段
+
+#### 1.1、概念
+
+> 字段包括：普通字段和静态字段，他们在定义和使用中有所区别，而最本质的区别是内存中保存的位置不同。字段名一般是名词
+
+#### 1.2、分类
+
+##### 1、静态字段(静态变量,类变量)。
+
+1. 定义
+
+   它随着这个程序的执行产生，随着程序的结束而消失，这样和程序‘共存亡’的字段，我们就叫它静态字段
+
+   在方法外面定义的字段统统称为静态字段
+
+2. 特点
+
+   1、这个类所有对象共享一个内存地址
+
+   2、直接可以通过 **类名.字段名**调用
+
+3. 调用方式
+
+   类名.类变量
+
+   对象.类变量
+
+##### 2、普通字段(实例变量)。
+
+1. 定义
+
+   类定义内部__init__函数内以self开头定义的变量
+
+2. 特点
+
+   1、属于对象
+
+3. 调用方式
+
+   对象.普通字段
+
+##### 3、举个栗子(类变量)
+
+1. 栗子1
 
 ```python
-class Person():
-    # 静态变量
-    name = "小明"
+   class Person:
+       money = 10000
 
-    def __init__(self, name):
-        self.name = name
+       def __init__(self, name, age, gender):
+           self.name = name
+           self.age = age
+           self.gender = gender
 
-    def say(self):
-        print(self.name + ":在说话")
-    def get_name(self):
-        return self.name
+       def say(self):
+           print(self.name + ':在说话!!!')
 
-    def set_name(self, name):
-        self.name = name
+
+   if __name__ == '__main__':
+     	'''测试开始'''
+       #打印类的属性
+       print(Person.__dict__.keys())
+       #通过类调用
+       print(Person.money)
+       #通过类操作类变量
+       Person.money += 1
+       print(Person.money)
+   	
+       xm = Person('小明', 18, '男')
+       #通过对象操作类变量
+       xm.money += 1
+       #通过对象调用
+       print(xm.money)
 ```
+
+   说明:
+
+   1、将类加载进内存 
+
+   2、将类变量加载进类的内存 
+
+   3、将`__init__()`方法的地址加载进类的内存
+
+   4、将普通方法方法的地址加载进类的内存
+
+   5、实例化对象分配对象内存地址
+
+   6、将实例变量初始化加载进对象内存
+
+1. 案例2
+
+   ```python
+   if __name__ == '__main__':
+       # 通过类修改类变量
+       person = Person('小明', 18, '男')
+       Person.money += 10000
+       print('通过类修改后的值:' + str(Person.money))
+       # 通过对象修改变量
+       person.money += 10000
+       print('通过对象修改后类变量:' + str(Person.money))
+       print('通过对象调用修改后的类变量:' + str(person.money))
+   ```
+
+   打印结果
+
+   ![](http://opzv089nq.bkt.clouddn.com/18-1-25/93925068.jpg)
+
+   内存结构图
+
+   ![](http://opzv089nq.bkt.clouddn.com/18-1-25/91835083.jpg)
+
+   说明
+
+   - 当我们类的内存中有一个类变量的时候，我们使用类去调用这个字段，自然找到的是类变量，当我们使用对象去调用的时候，这个对象指针先在自己的内存里找了找，发现没找到，于是就用对象中维护的类指针到类的内存中去找，果然找到了money,然后打印出来
+   - 当我们使用对象去第一次调用并改变一个类的类变量的时候，它们自己的内存中并没有money字段，所以还是通过类指针到类内存中去找，但是当它们找到之后，就会在自己的内存空间开辟一块空间来存储对这个类变量修改后的结果。所以，这个时候类中的类变量就不会被改变，而两个对象中的money字段也就不会互相影响
+
+   **注意事项:我们只需要记住，在使用类的静态变量的时候，必须要用类名来调用和修改。它才会永远被类和对象共享**
+
+1.3、self关键字
+
+> 学过其他语言的人都知道, python 的 self 其实就是在其他语言的`this`.
+>
+> 那么`self`到底指代哪个对象?
+>
+> 通过哪个对象调用的这个实例方法, 那么这个实例方法中的`self`就指代谁
+>
+> **而且 python 的`self`一朝绑定, 终身不变. **(不像 javascript 中的那个 `this` 小婊砸随着调用方式的不同而而更改绑定对象, 让你眼花缭乱到怀疑人生)
+
+### 2、方法
+
+#### 2.1、概念
+
+> 方法包括：普通方法、静态方法和类方法，三种方法在**内存中都归属于类**，区别在于调用方式不同,方法名称一般以动词开头
+
+#### 2.2、分类
+
+1. 按作用分
+
+- 构造方法(`__init__(self)`)
+- 析构函数(`__del__(self)`)
+
+1. 按类型
+
+- 普通方法(实例方法)
+- 私有方法（方法前面加两个下划线）
+- 静态方法
+- 类方法
+- 属性方法
+
+#### 2.3、普通方法
+
+1. 说明
+
+   由**对象**调用；至少一个`self`参数；执行普通方法时，自动将调用该方法的**对象**赋值给`self`
+
+2. 语法格式
+
+   ```python
+   class 类名:
+      def 普通方法名(self,参数列表):
+         print('普通方法名')
+         
+      def 普通方法名(self,参数列表)
+     		return '返回值'
+   ```
+
+3. 调用方式
+
+   obj.普通方法()
+
+4. 注意事项
+
+   1. 通过类的实例去调用
+   2. 可以使用类变量,和实例变量
+
+5. 举个栗子
+
+   - 不带参数的普通方法
+
+     ```python
+     class Person:
+       def __init__(self, name, age, gender):
+         self.name = name
+         self.age = age
+         self.gender = gender
+       
+       	def say(self):
+           print(self.name + ':今天天气挺好的!!!')
+           
+
+     if __name__ == '__main__':
+       	'''测试开始'''
+         xm = Person('小明', 18, '男')
+         xm.say()
+      
+     ```
+
+   - 带参数的普通方法
+
+     ```python
+     class Person:                                     
+         def __init__(self, name, age, gender):        
+             self.name = name                          
+             self.age = age                            
+             self.gender = gender                      
+                                                       
+         def say(self):                                
+             print(self.name + ':今天天气挺好的!!!')          
+                                                       
+         def say1(self, content):                      
+             print(self.name + content)                
+                                                       
+                                                       
+     if __name__ == '__main__':                        
+         '''测试开始'''                                    
+         xm = Person('小明', 18, '男')
+         #带参数的
+         xm.say1(':阿红我想你!!!')                          
+     ```
+
+   - 带返回值
+
+     ```python
+     class Person:                                     
+         def __init__(self, name, age, gender):        
+             self.name = name                          
+             self.age = age                            
+             self.gender = gender                      
+                                                       
+         def say(self):                                
+             print(self.name + ':今天天气挺好的!!!')          
+
+         def get_name(self):
+             return self.name
+                                                                                              
+     if __name__ == '__main__':                        
+         '''测试开始'''                                    
+         xm = Person('小明', 18, '男')
+       	print(xm.get_name())
+        
+     ```
+
+   -  不要在实例方法里绑定实例变量
+
+     ```python
+     class  Person:
+       #推荐放在init方法中
+       def set_name(self, name):
+           self.name = name
+     ```
+
+#### 2.4、静态方法
+
+1. 说明
+
+   由**对象**调用；至少一个`self`参数；执行普通方法时，自动将调用该方法的**对象**赋值给`self`
+
+2. 语法格式
+
+   ```python
+   class 类名:
+   	@staticmethod
+   	def 静态方法名():
+   		pass
+   ```
+
+3. 调用方式
+
+   类名.静态方法名()
+
+4. 注意事项
+
+   要在类中使用静态方法，需在类成员函数前面加`上@staticmethod`标记符，
+
+   以表示下面的成员函数是静态函数。使用静态方法的好处是，不需要定义实例即可使用这个方法。
+
+   另外，多个实例共享此静态方法，一般在工具类中使用的比较多
+
+5. 示例代码
+
+   - 栗子1
+
+     ```
+
+     ```
+
+   - 栗子2
+
+     ```
+
+     ```
+
+#### 2.5、类方法
+
+1. 说明
+
+   类方法，方法中的self是类本身，调用方法时传的值也必须是类的公有属性，就是说类方法只能操作类本身的公有字段
+
+2. 语法格式
+
+   ```python
+   class 类名:
+   	def 类方法(cls):
+   		pass
+   ```
+
+3. 调用方式
+
+4. 注意事项
+
+5. 举个栗子
+
+   ```
+
+   ```
+
+### 3、属性
+
+   属性内部进行一系列的逻辑计算，最终将计算结果返回
 
 **练习二**：游戏人生程序
 
@@ -166,64 +558,69 @@ class Person():
 2、游戏场景，分别：
 
 - 草丛战斗，消耗200战斗力
+
 - 自我修炼，增长100战斗力
+
 - 多人游戏，消耗500战斗力
 
-```
-class Person()
+  ```python
+  class Person:
 
-    def __init__(self, na, gen, age, fig):
-        self.name = na
-        self.gender = gen
-        self.age = age
-        self.fight =fig
+   def __init__(self, name, gender, age, fight):
+       self.name = name
+       self.gender = gen
+       self.age = age
+       self.fight =fight
+   
+   def grassland(self):
+       """注释：草丛战斗，消耗200战斗力"""
+       self.fight = self.fight - 200
+   
+   def practice(self):
+       """注释：自我修炼，增长100战斗力"""
+       self.fight = self.fight + 200
+   
+   def incest(self):
+       """注释：多人游戏，消耗500战斗力"""
+       self.fight = self.fight - 500
+   
+  def detail(self):
+       """注释：当前对象的详细情况"""
+       temp = "姓名:%s ; 性别:%s ; 年龄:%s ; 战斗力:%s"  % (self.name, self.gender, self.age, self.fight)
+       print temp
+   #####################  开始游戏
 
-    def grassland(self):
-        """注释：草丛战斗，消耗200战斗力"""
+  cang = Person('苍井井', '女', 18, 1000)    # 创建空空角色
 
-        self.fight = self.fight - 200
+  dong = Person('东尼木木', '男', 20, 1800)  # 创建木木角色
 
-    def practice(self):
-        """注释：自我修炼，增长100战斗力"""
-        
-        self.fight = self.fight + 200
+  bo = Person('波多多', '女', 19, 2500)      # 创建多多角色
 
-    def incest(self):
-        """注释：多人游戏，消耗500战斗力"""
-        
-        self.fight = self.fight - 500
+  cang.incest() #空空参加一次多人游戏
 
-    def detail(self):
-        """注释：当前对象的详细情况"""
+  dong.practice()#木木自我修炼了一次
 
-        temp = "姓名:%s ; 性别:%s ; 年龄:%s ; 战斗力:%s"  % (self.name, self.gender, self.age, self.fight)
-        print temp
+  bo.grassland() #多多参加一次草丛战斗
+  输出当前所有人的详细情况
 
-        
-# #####################  开始游戏  #####################
+  cang.detail()
 
-cang = Person('苍井井', '女', 18, 1000)    # 创建空空角色
-dong = Person('东尼木木', '男', 20, 1800)  # 创建木木角色
-bo = Person('波多多', '女', 19, 2500)      # 创建多多角色
+  dong.detail()
 
-cang.incest() #空空参加一次多人游戏
-dong.practice()#木木自我修炼了一次
-bo.grassland() #多多参加一次草丛战斗
+  bo.detail()
 
+  cang.incest() #空又参加一次多人游戏
 
-#输出当前所有人的详细情况
-cang.detail()
-dong.detail()
-bo.detail()
+  dong.incest() #木木也参加了一个多人游戏
 
+  bo.practice() #多多自我修炼了一次
 
-cang.incest() #空又参加一次多人游戏
-dong.incest() #木木也参加了一个多人游戏
-bo.practice() #多多自我修炼了一次
+  输出当前所有人的详细情况
 
-#输出当前所有人的详细情况
-cang.detail()
-dong.detail()
-bo.detail()
-```
+  cang.detail()
 
+  dong.detail()
+
+  bo.detail()
+
+  ```
