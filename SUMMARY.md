@@ -19,7 +19,7 @@
     * [十三、面向对象编程](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-san-3001-mian-xiang-dui-xiang.md)
     * [十四、类和对象\(一\)](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-si-3001-mian-xiang-dui-xiang-jin-jie.md)
     * [十四、类和对象\(二\)](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-si-3001-lei-he-dui-8c6128-4e8c29.md)
-    * 十四、类和对象\(三\)
+    * [十四、类和对象\(三\)](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-si-3001-lei-he-dui-8c6128-4e0929.md)
     * 十四、类和对象\(四\)
     * 十五、面向对象进阶
     * 十六、面向对象高级
