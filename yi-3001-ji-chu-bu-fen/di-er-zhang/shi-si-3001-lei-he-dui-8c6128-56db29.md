@@ -180,7 +180,6 @@
    print(Foo.__doc__)
    ```
 
-```
 #### 2、 `__init__()`
 
 1. 说明
@@ -189,19 +188,16 @@
 
 2. 栗子
 
-```
-
+   ```
    class Foo:
 
-```
-   def __init__(self, name):
-       self.name = name
-       self.age = 18
-```
+       def __init__(self, name):
+           self.name = name
+           self.age = 18
 
    obj = Foo(jack') # 自动执行类中的 __init__ 方法
+   ```
 
-```
 #### 3、 `__module__` 和 `__class__`
 
 1. 说明
@@ -226,9 +222,7 @@
    运行结果：
    __main__
    <class '__main__.Foo'>
-
-
-```
+   ```
 
 #### 4、`__del__()`
 
@@ -291,70 +285,75 @@
    >>> callable(str)
    True
    ```
-
-
 ### 6、 `__dict__`
 
-列出类或对象中的所有成员！非常重要和有用的一个属性，Python自建，无需用户自己定义。
+1. 说明
 
-​```python
-class Province:
-    country = 'China'
-    def __init__(self, name, count):
-        self.name = name
-        self.count = count
+   列出类或对象中的所有成员！非常重要和有用的一个属性，Python自建，无需用户自己定义。
 
-    def func(self, *args, **kwargs):
-        print（'func'）
+2. 栗子
 
-# 获取类的成员
-print(Province.__dict__)
+   ```python
+   class Province:
+       country = 'China'
+       def __init__(self, name, count):
+           self.name = name
+           self.count = count
+       
+       def func(self, *args, **kwargs):
+           print（'func'）
 
-# 获取 对象obj1 的成员 
-obj1 = Province('HeBei',10000)
-print(obj1.__dict__)
+   # 获取类的成员
+   print(Province.__dict__)
 
-# 获取 对象obj2 的成员 
-obj2 = Province('HeNan', 3888)
-print(obj2.__dict__)
+   # 获取 对象obj1 的成员 
+   obj1 = Province('湖北',10000)
+   print(obj1.__dict__)
 
-```
+   # 获取 对象obj2 的成员 
+   obj2 = Province('武汉', 3888)
+   print(obj2.__dict__)
+   ```
 
-### 7、`__str__()`
-
-如果一个类中定义了`__str__()`方法，那么在打印对象时，默认输出该方法的返回值。这也是一个非常重要的方法，需要用户自己定义。　
-
-下面的类，没有定义`__str__()`方法，打印结果是：`<__main__.Foo object at 0x000000000210A358>`
-
-```python
-class Foo:
-    pass
-
-obj = Foo()
-print(obj)
-
-```
-
-定义了`__str__()`方法后，打印结果是：'jack'。
-
-```python
-class Foo:
-    def __str__(self):
-        return 'jack'
-obj = Foo()
-print(obj)
-
-```
-
-### 8、`__getitem__()`、`__setitem__()`、`__delitem__()`
+#### 7、`__str__()`
 
 1. 说明
+
+   如果一个类中定义了`__str__()`方法，那么在打印对象时，默认输出该方法的返回值。这也是一个非常重要的方法，需要用户自己定义。　
+
+2. 栗子
+
+   下面的类，没有定义`__str__()`方法，打印结果是：`<__main__.Foo object at 0x000000000210A358>`
+
+   ```python
+   class Foo:
+       pass
+
+   obj = Foo()
+   print(obj)
+
+   ```
+
+   定义了`__str__()`方法后，打印结果是：'jack'。
+
+   ```python
+   class Foo:
+       def __str__(self):
+           return 'jack'
+   obj = Foo()
+   print(obj)
+
+   ```
+
+   ### 8、`__getitem__()`、`__setitem__()`、`__delitem__()`
+
+3. 说明
 
    取值、赋值、删除这“三剑客”的套路，在Python中，我们已经见过很多次了，比如前面的`@property`装饰器。
 
    Python中，标识符后面加圆括号，通常代表执行或调用方法的意思。而在标识符后面加中括号[]，通常代表取值的意思。Python设计了`__getitem__()`、`__setitem__()`、`__delitem__()`这三个特殊成员，用于执行与中括号有关的动作。它们分别表示取值、赋值、删除数据。
 
-2. 栗子
+4. 栗子
 
    ```
    a = 标识符[]　： 　　执行__getitem__方法
@@ -362,7 +361,7 @@ print(obj)
    del 标识符[]　： 　　执行__delitem__方法
    ```
 
-3. 如果有一个类同时定义了这三个魔法方法，那么这个类的实例的行为看起来就像一个字典一样，如下例所示：
+5. 如果有一个类同时定义了这三个魔法方法，那么这个类的实例的行为看起来就像一个字典一样，如下例所示：
 
    ```python
    class Foo:
@@ -375,16 +374,14 @@ print(obj)
 
        def __delitem__(self, key):
            print('__delitem__',key)
-           
+
    obj = Foo()
-   result = obj['k1']      # 自动触发执行 getitem
-   obj['k2'] = 'jack'      # 自动触发执行 setitem
-   del obj['k1']           # 自动触发执行 delitem
+
+   result = obj['k1']      # 自动触发执行 __getitem__
+   obj['k2'] = 'jack'      # 自动触发执行 __setitem__
+   del obj['k1']           # 自动触发执行 __delitem__
 
    ```
-
-
-
 
 ### 9、 `__iter__()`
 
@@ -402,33 +399,27 @@ print(obj)
        obj = Foo()    
        for i in obj:
          print(i)
-      
    ```
-```
 
    报错：TypeError: 'Foo' object is not iterable # 原因是Foo对象不可迭代 
 
-1. 添加一个`__iter__()`，但什么都不返回：
+3. 添加一个`__iter__()`，但什么都不返回：
 
-```
-  ```python
-  class Foo:
+   ```python
+     class Foo:
 
-      def __iter__(self):
-          pass
+         def __iter__(self):
+             pass
 
-  obj = Foo()
+     obj = Foo()
 
-  for i in obj:
-      print(i)
+     for i in obj:
+         print(i)
+     # 报错：TypeError: iter() returned non-iterator of type 'NoneType'
+     #原因是 __iter__方法没有返回一个可迭代的对象
+   ```
 
-  # 报错：TypeError: iter() returned non-iterator of type 'NoneType'
-
-  #原因是 __iter__方法没有返回一个可迭代的对象
-  ```
-```
-
-1. 返回一个个迭代对象：
+4. 返回一个个迭代对象：
 
    ```python
    class Foo:
@@ -445,9 +436,9 @@ print(obj)
        print(i)
 
    # 这下没问题了！
-```
+   ```
 
-2. 最好的方法是使用生成器：
+5. 最好的方法是使用生成器：
 
    ```python
    class Foo:
@@ -478,7 +469,6 @@ print(obj)
    3
    >>> 'ABC'.__len__()
    3
-
    ```
 
    Python的list、dict、str等内置数据类型都实现了该方法，但是你自定义的类要实现len方法需要好好设计。
@@ -602,9 +592,7 @@ print(obj)
    obj2.show()
    ```
 
-   ​
-
-15、综合
+#### 15、综合
 
 1. 栗子
 
