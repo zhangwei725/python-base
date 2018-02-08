@@ -695,7 +695,7 @@
        pass
    if __name__ == '__main__':
        print(A.__mro__)
-       # print(A().mro())
+       # print(A.mro())
    ```
 
    ![](http://opzv089nq.bkt.clouddn.com/18-2-7/35177547.jpg)
