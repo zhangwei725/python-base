@@ -186,7 +186,7 @@
 
 2. 栗子
 
-   ```
+   ```py
    class Foo:
 
        def __init__(self, name):
@@ -564,7 +564,7 @@
 
    但是！如果我想限制实例可以添加的变量怎么办？可以使`__slots__`限制实例的变量，比如，只允许Foo的实例添加name和age属性。
 
-   ```
+   ```py
    def print_doc(self):
        print("haha")
 
