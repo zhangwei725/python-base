@@ -23,5 +23,5 @@
     * [十四、类和对象\(四\)](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-si-3001-lei-he-dui-8c6128-56db29.md)
     * [十五、面向对象进阶](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-wu-3001-mian-xiang-dui-xiang-jin-jie.md)
     * [十六、面向对象高级](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-liu-3001-mian-xiang-dui-xiang-gao-ji.md)
-    * 十七、面向对象其它
+    * [十七、面向对象其它](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-qi-3001-mian-xiang-dui-xiang-qi-ta.md)
 
