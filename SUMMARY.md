@@ -13,7 +13,7 @@
     * [八、流程控制](yi-3001-ji-chu-bu-fen/di-yi-zhang/ba-3001-liu-cheng-kong-zhi.md)
     * [九、序列,字符串](yi-3001-ji-chu-bu-fen/di-yi-zhang/jiu-3001-xu-52172c-zi-fu-chuan.md)
     * [十、列表,元组,字典,集合](yi-3001-ji-chu-bu-fen/di-yi-zhang/shi-3001-lie-88682c-yuan-7ec42c-zi-51782c-ji-he.md)
-    * 四、格式化输出
+    * 四、格式化输出\(附\)
   * [第二章](yi-3001-ji-chu-bu-fen/di-er-zhang.md)
     * [十一、函数](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-yi-3001-han-shu.md)
     * [十二、函数进阶](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-er-3001-han-shu-jin-jie.md)
