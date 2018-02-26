@@ -1,6 +1,6 @@
 # Python变量常量
 
-## 一、变量(variable)
+## 一、变量\(variable\)
 
 ### 1、概要
 
@@ -12,7 +12,7 @@
 >
 > 我们初学计算机语言的时候，就接触到了变量的概念，当然，那时候不可能给出精确的定义，很多书在讲的时候就像大家看到了变量这个词大概就能知道它是什么一样无需解释，比如《C语言程序设计》里直接就提到了变量的说明而没有说什么是变量。当我们带着这种模糊的感觉变成“有经验”的程序员时，似乎已经没人在意变量究竟是什么了
 >
-> ​	In computer programming, a variable is a storage location and an associated symbolic name (an identifier) which contains some known or unknown quantity or information, a value
+> ​    In computer programming, a variable is a storage location and an associated symbolic name \(an identifier\) which contains some known or unknown quantity or information, a value
 >
 > 变量是一个**存储位置**和一个关联的**符号名字**，这个**存储位置**包含了一些已知或未知的量或者信息，即值，所有理解变量要从这三个方面去理解
 >
@@ -24,13 +24,13 @@
 
 ### 1、变量声明
 
-> 在Python中，变量不需要明确的声明类型来保留内存空间。当向变量分配值时，Python会自动发出声明。 等号(`=`)用于为变量赋值。因为Python中变量声明变量不需要类型所有声明时最好直接赋值
+> 在Python中，变量不需要明确的声明类型来保留内存空间。当向变量分配值时，Python会自动发出声明。 等号\(`=`\)用于为变量赋值。因为Python中变量声明变量不需要类型所有声明时最好直接赋值
 
 ### 2、示例代码
 
 1. 基础使用
 
-   ```python
+   ```py
    #!/usr/bin/python3 
 
    number1 = 1 #整形
@@ -90,7 +90,7 @@
    userName ="rose" #正确
    ```
 
-4. Python的变量名是除分大小写的，例如：name和Name就是两个变量名，而非相同变量哦。 
+4. Python的变量名是除分大小写的，例如：name和Name就是两个变量名，而非相同变量哦。
 
 5. 变量命名尽量起的有意义,而且使用前尽量先赋值
 
@@ -124,15 +124,13 @@
 
 ### 3、命名规范
 
-1. 字母全部大写,单词之间用下划线(_)连接
+1. 字母全部大写,单词之间用下划线\(\_\)连接
 
    ```python
    SYS_VERSION=1
    ```
 
    ​
-
-
 
 
 
