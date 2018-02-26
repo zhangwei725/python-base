@@ -10,5 +10,5 @@ python有丰富而强大的库，能做很多事，也被称之为“胶水语�
 
 Mac OS原生支持python运行环境，linux和windows都能安装python运行环境，配合简单的IDE就能编写python程序了。
 
-IDE方面，idea也有针对python的IDE支持，代码写起来很舒服，另外还有jetbrain专门开发的PyCharm，选择很多。大牛用vim也能写python~
+IDE方面，idea也有针对python的IDE支持，代码写起来很舒服，另外还有jetbrain专门开发的PyCharm，选择很多。大牛用vim也能写python
 
