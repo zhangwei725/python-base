@@ -284,7 +284,7 @@ print	raise	return	try	while	with	yield
    ​	大驼峰：StudentNameTable	
 
 3. 各种类型的命名规范：
-   <img src="http://o7cqr8cfk.bkt.clouddn.com/markdown/1499780681915.png-yztcText">
+   <img src="http://o7cqr8cfk.bkt.clouddn.com/markdown/1499780681915.png">
 
 
 1. 避免采用的名字
