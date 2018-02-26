@@ -12,3 +12,7 @@ Mac OS原生支持python运行环境，linux和windows都能安装python运行�
 
 IDE方面，idea也有针对python的IDE支持，代码写起来很舒服，另外还有jetbrain专门开发的PyCharm，选择很多。大牛用vim也能写python
 
+## 应用领域
+
+1.人工智能方向，python应用很广，谷歌的TensorFlow基本上所有的代码都是C++和Python，python的研发效率高，大公司选它作为技术栈情有可原。相信后续人工智能方向针对python的解决方案会越来越多
+
