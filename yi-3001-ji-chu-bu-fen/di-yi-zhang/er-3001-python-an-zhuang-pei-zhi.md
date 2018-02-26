@@ -62,7 +62,7 @@ Python有两个版本，一个是2.x版，一个是3.x版，这两个版本是�
 
 [https://www.python.org/downloads/mac-osx/](https://www.python.org/downloads/mac-osx/) 下载相应的版本,双击安装
 
-如果安装了 Homebrew，直接通过命令 brew install python3 安 装即可
+如果安装了 Homebrew，直接通过命令 brew install python3安装即可
 
 测试命令
 
