@@ -1,6 +1,7 @@
 # Summary
 
 * [简介](README.md)
+  * 二、Linux
 * [一、基础部分](yi-3001-ji-chu-bu-fen.md)
   * [第一章](yi-3001-ji-chu-bu-fen/di-yi-zhang.md)
     * [一、Python简介](yi-3001-ji-chu-bu-fen/di-yi-zhang/yi-3001-python-jian-jie.md)
@@ -24,4 +25,5 @@
     * [十五、面向对象进阶](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-wu-3001-mian-xiang-dui-xiang-jin-jie.md)
     * [十六、面向对象特性](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-liu-3001-mian-xiang-dui-xiang-gao-ji.md)
     * [十七、面向对象其它](yi-3001-ji-chu-bu-fen/di-er-zhang/shi-qi-3001-mian-xiang-dui-xiang-qi-ta.md)
+* [二、Linux](er-3001-linux.md)
 
