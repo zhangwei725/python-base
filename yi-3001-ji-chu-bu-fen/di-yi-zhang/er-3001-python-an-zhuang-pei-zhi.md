@@ -20,29 +20,29 @@
 
 1. 首先，根据你的 Windows 版本（64 位还是 32 位）从 Python 的官方网 站下载 Python 3.6 对应的版本然后，运行下载的 EXE 安装包
 
-   ![](http://opzv089nq.bkt.clouddn.com/17-12-13/76254487.jpg)
+   ![](http://qiniudns.funtl.com/17-12-13/76254487.jpg)
 
 2. 双击下载包
 
-   ![](http://opzv089nq.bkt.clouddn.com/17-12-13/26132237.jpg)
+   ![](http://qiniudns.funtl.com/17-12-13/26132237.jpg)
 
 3. 安装界面
 
-   ![](http://opzv089nq.bkt.clouddn.com/17-12-13/92373377.jpg)
+   ![](http://qiniudns.funtl.com/17-12-13/92373377.jpg)
 
 4. 安装完成关闭
 
-   ![](http://opzv089nq.bkt.clouddn.com/17-12-13/85088225.jpg)
+   ![](http://qiniudns.funtl.com/17-12-13/85088225.jpg)
 
 5. 测试是否安装成功
 
-   ![](http://opzv089nq.bkt.clouddn.com/17-12-13/35660557.jpg)
+   ![](http://qiniudns.funtl.com/17-12-13/35660557.jpg)
 
 6. 自定义安装
 
-   ![](http://opzv089nq.bkt.clouddn.com/17-12-13/8132322.jpg)
+   ![](http://qiniudns.funtl.com/17-12-13/8132322.jpg)
 
-   ![](http://opzv089nq.bkt.clouddn.com/17-12-13/47614326.jpg)
+   ![](http://qiniudns.funtl.com/17-12-13/47614326.jpg)
 
 7. 如果add python to path忘记勾选了可以用命令或者图形化界面配置
 
@@ -54,7 +54,7 @@
 
    图形化界面配置
 
-   ![](http://opzv089nq.bkt.clouddn.com/17-12-13/9159529.jpg)
+   ![](http://qiniudns.funtl.com/17-12-13/9159529.jpg)
 
 ### 2、在mac上安装
 
@@ -66,7 +66,7 @@ Python有两个版本，一个是2.x版，一个是3.x版，这两个版本是�
 
 测试命令
 
-![](http://opzv089nq.bkt.clouddn.com/17-12-13/19474570.jpg)
+![](http://qiniudns.funtl.com/17-12-13/19474570.jpg)
 
 ### 3、在Linux上安装
 
